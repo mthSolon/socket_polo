@@ -1,6 +1,6 @@
 import socket
 
-def iniciar_servidor(port: int) -> None:
+def iniciar_servidor(port: int, hostname: str) -> None:
     """
     Inicia o servidor no IP local e na porta escolhida pelo usuário. Recebe o arquivo em bytes do cliente, converte
     e salva o arquivo no diretório atual.
@@ -10,7 +10,7 @@ def iniciar_servidor(port: int) -> None:
     :return: None
     """
 
-    host = 'localhost'
+    host = hostname
     port = port
 
     server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -35,4 +35,5 @@ def iniciar_servidor(port: int) -> None:
 
 def main():
     porta = int(input('Digite a porta em que o servidor irá escutar: '))
-    iniciar_servidor(porta)
+    hostname = input('Digite o hostname que o servidor irá escutar: ')
+    iniciar_servidor(porta, hostname)
