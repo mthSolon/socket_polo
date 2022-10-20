@@ -50,3 +50,6 @@ def main():
         conectar_cliente(porta, hostname)
     except ConnectionRefusedError:
         print('Conexão recusada.')
+
+if __name__ == "__main__":
+    main()

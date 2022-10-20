@@ -37,3 +37,6 @@ def main():
     porta = int(input('Digite a porta em que o servidor irá escutar: '))
     hostname = input('Digite o hostname que o servidor irá escutar: ')
     iniciar_servidor(porta, hostname)
+
+if __name__ == "__main__":
+    main()
